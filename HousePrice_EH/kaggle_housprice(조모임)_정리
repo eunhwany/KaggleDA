@@ -1,0 +1,32 @@
+< 20170923 발표정리 >
+1) y 변수 분포 : 대략 설명
+2) x 변수들의 분포 : 숫자형/범주형 변수
+3) linear regression 평가결과 간단 > 모경현님
+4) 변수처리 안하고 라쏘/리지 regression 평가결과> 제효준님
+5) 추후 모델링 변수 분석 및 목표 방안.
+
+< 20170923 스터디 피드백 >
+missing value를 채우는 방법에 따라 모델링 차이 비교.
+bulityear에 따른 time series에 대한 부동산 집 가격도 달라질수 있다고 생각됨.
+- 폭락 폭등시 모델 구분
+- 년도별 지역별 구분
+- GAM 모델?
+- clustering k-means
+결측값 처리 >> knn 모델링을 통해?
+
+< 20170930 조모임 >
+1) 지어진 년도, 재건축년도, sole년도에 대해 saleprice가 어떻게 변화하는지 유효한지 분석
+  - 지어진년도, 재건축년도 >> 설명유력(coefficient)가 높음
+  - sold년도 하나로는 설명 불가 > (sold년도-지어진년도): 집이 지어진 년차 변수 생성
+  - 집지어진 년차 >> linear한 설명 가능.
+2) neighborhood 등 범주형 변수의 특성 파악 요망
+  - 범주형 변수 중 train데이터에 포함되지 않는 범주가 test에 있을경우 >> 처리어떻게?(새로운 값에 대해)
+3) 기본적인 전처리, na, 결측값 처리
+4) 모델
+: linear, lasso/ridge regression, randomforest >> 써봤음
+ > 변수처리와 년도 처리한 regression 을 정리해야함!
+
+< 20171028 스터디 정리 >
+1.keras나 tensorflow적용시 > factor변수 적용시 level값을 이산형으로 변환시켜야..
+2.sklearn.selection.RFE
+3. oversampling, undersampling > 라이브러리 설치했음

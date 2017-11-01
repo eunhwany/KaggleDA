@@ -1,0 +1,4 @@
+1. Id 변수 제거
+2. 수치형 변수 Normalization
+3. Test의 범주형 변수의 값이 Train에 없는 변수들 제거
+4. RandomForest 모델의 Tree 수 100~3000개까지 100개 단위로 탐색
